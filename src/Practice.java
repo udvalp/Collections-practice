@@ -16,19 +16,23 @@ public class Practice {
 	studyNumberHM.put("17-5001", new HashMap());
 	studyNumberHM.put("17-5002", new HashMap());
 	int i = 1;
-	for(Map.Entry<String,HashMap> studyNumbers: studyNumberHM.entrySet()) {
-		studyNumberHM.get(studyNumbers.getKey()).put(++i,new HashMap<String,String>());
-		studyNumberHM.get(studyNumbers.getKey()).put(++i,new HashMap<String,String>());
-	}
+		
+		
+		for(Map.Entry<String,HashMap> studyNumbers: studyNumberHM.entrySet()) {
+			studyNumberHM.get(studyNumbers.getKey()).put(++i,new HashMap<String,String>());
+			studyNumberHM.get(studyNumbers.getKey()).put(++i,new HashMap<String,String>());
+		}
+	
 	ArrayList<Integer> testArticle = new ArrayList();
+	
 	for(String studyNumbers: studyNumberHM.keySet()) {
 		System.out.println(studyNumberHM.get(studyNumbers).keySet());
 		Set<Integer> abc = studyNumberHM.get(studyNumbers).keySet();
-		for(Integer abc1: abc) {
+			for(Integer abc1: abc) {
+				
+				testArticle.add(abc1);
+			}
 			
-			testArticle.add(abc1);
-		}
-		
 		/*
 		Set<String> abc = ((HashMap<String, HashMap>) studyNumbers).keySet();
 		for(String testArticleName: abc) {
@@ -46,12 +50,15 @@ public class Practice {
 			
 			if(studyNumberHM.get(studyNumbers).containsKey(testArticleNumber)) {
 					System.out.println(studyNumbers+testArticleNumber);
-				HashMap<Integer,HashMap> hm1 = (HashMap<Integer,HashMap>) studyNumberHM.get(studyNumbers);
-				HashMap<String,String> hm2 =  hm1.get(testArticleNumber);
-				System.out.println(hm2);
-				hm2.put("Negative Contrl","100");
-				hm2.put("Positive Contrl","200");
-				hm2.put("Conc","100");
+							
+							HashMap<Integer,HashMap> hm1 = (HashMap<Integer,HashMap>) studyNumberHM.get(studyNumbers);
+							
+							HashMap<String,String> hm2 =  hm1.get(testArticleNumber);
+					System.out.println(hm2);
+							
+							hm2.put("Negative Contrl","100");
+							hm2.put("Positive Contrl","200");
+							hm2.put("Conc","100");
 			}
 				//((HashMap<String, String>) studyNumberHM.get(studyNumbers).get(testArticleNumber)).put("Negative Contrl","100");
 				//((HashMap<String, String>) studyNumberHM.get(studyNumbers).get(testArticleNumber)).put("Conc","100");
