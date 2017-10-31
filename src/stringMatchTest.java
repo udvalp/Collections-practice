@@ -18,7 +18,12 @@ public class stringMatchTest {
 	        for(int i=0;i<s.length();i++){
 	            
 	            if(i>0){
-	            if(s.charAt(i)=="*".charAt(0))s=s.substring(0,i)+s.charAt(i-1)+s.substring(i);
+	            if(s.charAt(i)=="*".charAt(0)) {
+	            	int c=i;
+	            	while(s.charAt(c)==s.charAt(i)&i<s.length())
+	            		++i;
+	            	break;
+	            }
 	            if(p.charAt(i)=="*".charAt(0))p=p.substring(0,i)+p.charAt(i-1)+p.substring(i);
 	            }
 	            if(s.charAt(i)==".".charAt(0)|p.charAt(i)==".".charAt(0)) continue;
