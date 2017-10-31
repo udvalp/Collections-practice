@@ -4,7 +4,7 @@ public class stringMatchTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		boolean ret = new Solution().isMatch("HI6767^&^&","HI");
+		boolean ret = new Solution().isMatch("HI*","HIH");
 		System.out.println(ret);
 
 	}
