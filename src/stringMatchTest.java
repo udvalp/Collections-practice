@@ -4,7 +4,7 @@ public class stringMatchTest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		boolean ret = new Solution().isMatch("HI*","HIH");
+		boolean ret = new Solution().isMatch("HI*H","HIIIIIIIIH");
 		System.out.println(ret);
 
 	}
@@ -15,14 +15,15 @@ public class stringMatchTest {
 	class Solution {
 	    public boolean isMatch(String s, String p) {
 	        if(s.length()!=p.length())return false;
-	        for(int i=0;i<s.length();i++){
+	        for(int i=0;i<p.length();i++){
 	            
 	            if(i>0){
 	            if(s.charAt(i)=="*".charAt(0)) {
 	            	int c=i;
-	            	while(s.charAt(c)==s.charAt(i)&i<s.length())
+	            	while(i<s.length()-1&&s.charAt(c)==s.charAt(i))
+	            		System.out.println("Number of Is"+i);
 	            		++i;
-	            	break;
+	            	
 	            }
 	            if(p.charAt(i)=="*".charAt(0))p=p.substring(0,i)+p.charAt(i-1)+p.substring(i);
 	            }
