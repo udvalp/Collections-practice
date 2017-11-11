@@ -16,6 +16,9 @@ public class arrayTest {
 			System.out.println(test2);
 			System.out.println(abc);
 			System.out.println("nuetral");
+
+
+
 		}
 	}
 
