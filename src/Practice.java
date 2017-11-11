@@ -44,7 +44,7 @@ public class Practice {
 	}
 	System.out.println(studyNumberHM);
 	for(Integer testArticleNumber: testArticle) {
-		
+
 		System.out.println(testArticleNumber);
 		for(String studyNumbers: studyNumberHM.keySet()) {
 			
