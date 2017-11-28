@@ -121,8 +121,7 @@ for(int a123:a1) {
 		System.out.println(a1.toString());
 		
 		System.out.println(hMap.entrySet());
-		
-		
+
 		
 		String S = "hERG Automated Patch Clamp";
 		  String A= "hERG Automated Patch Clamp";
